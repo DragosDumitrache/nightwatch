@@ -1,0 +1,130 @@
+format = """
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$time\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$status\
+$shell\
+$character"""
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+
+#[status]
+#disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[aws]
+disabled = true
+format = 'on [$symbol$profile(\($region\))]($style) '
+style = "bold blue"
+
+[gcloud]
+disabled = true
+
+[cmd_duration]
+format = "[$duration](bold yellow)"
+
+[directory]
+style = "cyan"
+truncation_length = 8
+truncate_to_repo = true
+truncation_symbol = "./"
+
+[time]
+disabled = true
+format = '[\[$time\]]($style)'
+time_format = "%T"
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = ""
+#symbol = "👾 "
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+
+[git_status]
+conflicted = "🏳"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+[kubernetes]
+format = '⛵ on [$context \($namespace\)](dimmed green) '
+disabled = true
+
+[nodejs]
+disabled = true
+
+[golang]
+disabled = true
+
+
+[shlvl]
+disabled = false
+format = "$shlvl level(s) down"
+threshold = 3
+
