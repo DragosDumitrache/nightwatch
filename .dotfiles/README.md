@@ -5,3 +5,8 @@ To install this on a new machine, see [this Hacker news post](https://news.ycomb
 ```sh
 git clone --separate-git-dir=~/.cfg git@github.com:DragosDumitrache/nightwatch.git ~
 ```
+
+From then on, simply run
+`./01-bootstrap.sh` 
+
+For the macos system defaults, there is a `set-defaults.sh` script in [02-system](02-system) that you can run manually
