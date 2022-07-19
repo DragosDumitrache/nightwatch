@@ -20,4 +20,4 @@ end
 starship init fish | source
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
-set -U FZF_COMPLETE=1
+set -U FZF_COMPLETE 1
