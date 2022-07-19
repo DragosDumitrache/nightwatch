@@ -14,4 +14,4 @@ brew "asdf"
 brew "git-delta"
 brew "bat"
 brew "fzf"
-
+brew "zoxide"
