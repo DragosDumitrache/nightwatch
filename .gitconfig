@@ -1,0 +1,82 @@
+# Local/private config goes in the include
+[include]
+        path = ~/.gitconfig.local
+[hub]
+	protocol = ssh
+[alias]
+        co = checkout
+        promote = !$ZSH/bin/git-promote
+        wtf     = !$ZSH/bin/git-wtf
+        rank-contributors = !$ZSH/bin/git-rank-contributors
+        count   = !git shortlog -sn
+        b = branch
+        wS = status -sb
+        ws = status
+        fr = pull --rebase
+        fm = pull
+        ia = add
+        ir = restore --staged
+        c = commit
+        r = rebase
+        ra = rebase --abort
+        rc = rebase --continue
+        ri = rebase --interactive
+        t = tag
+        d = describe
+        rb = browse
+
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = emacsclient -c -a \"\"
+	# editor = nvim
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+
+[delta "interactive"]
+    keep-plus-minus-markers = true
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to suppress warning message
+	default = current
+	followTags = true
+[pull]
+	rebase = false
+[credential]
+	helper = osxkeychain
+[rerere]
+	enabled = true
+	autoupdate = true
+[init]
+	defaultBranch = main

@@ -1,0 +1,13 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "d12frosted/emacs-plus"
+tap "homebrew/cask"
+
+brew "git"
+brew "emacs-plus", args: ["with-ctags", "with-modern-icon"]
+brew "hub"
+brew "neovim"
+brew "perl"
+brew "jq"
+brew "fish"
+brew "asdf"
