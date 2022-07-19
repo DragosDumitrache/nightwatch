@@ -11,3 +11,7 @@ brew "perl"
 brew "jq"
 brew "fish"
 brew "asdf"
+brew "git-delta"
+brew "bat"
+brew "fzf"
+
