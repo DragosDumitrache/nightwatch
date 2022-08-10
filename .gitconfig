@@ -4,6 +4,10 @@
 [hub]
 	protocol = ssh
 [alias]
+    	hide = update-index --assume-unchanged
+    	unhide = update-index --no-assume-unchanged
+    	unhide-all = ! git ls-files -v | grep '^[a-z]' | cut -c3- | xargs git unhide --
+    	hidden = ! git ls-files -v | grep '^[a-z]' | cut -c3-
         co = checkout
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
