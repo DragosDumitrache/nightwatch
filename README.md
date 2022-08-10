@@ -5,7 +5,7 @@ To install this on a new machine, see [this Hacker news post](https://news.ycomb
 ```sh
 git clone --separate-git-dir=~/.cfg git@github.com:DragosDumitrache/nightwatch.git ~
 
-$HOME/dot config status.showUntrackedFiles no
+./$HOME/dot config status.showUntrackedFiles no
 ```
 
 From then on, simply run
