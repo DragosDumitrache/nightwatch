@@ -256,6 +256,8 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+defaults write com.apple.dock "orientation" -string "left" && killall Dock
+
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
@@ -277,7 +279,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-# defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array
 
 # Show only open applications in the Dock
 # defaults write com.apple.dock static-only -bool true

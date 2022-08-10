@@ -19,7 +19,11 @@ then
     brew bundle install -v
 fi
 
-exit 0
+sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+chsh -s /opt/homebrew/bin/fish
+fish
+set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [ ! -d "$HOME/.emacs.d" ] && git clone https://gitlab.com/jackatbancast/emacs.d.git $HOME/.emacs.d
 

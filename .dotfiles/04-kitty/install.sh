@@ -1,1 +1,1 @@
-echo "Kitty is currently installed via Homebrew"
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
