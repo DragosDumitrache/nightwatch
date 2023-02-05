@@ -47,12 +47,38 @@ return {
         flags = 'FUZZY|WORKSPACES',
       },
     },
+
+    -- This will create a new split and run the `top` program inside it
+    {
+      key = '|',
+      mods = 'CTRL|SHIFT',
+      action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    },
+    {
+      key = '\\',
+      mods = 'CTRL',
+      action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+    },
+    {
+      key = 'e',
+      mods = 'CTRL|SHIFT',
+       action=wezterm.action{QuickSelectArgs={
+       patterns={
+          "https?://\\S+"
+       },
+       action = wezterm.action_callback(function(window, pane)
+          local url = window:get_selection_text_for_pane(pane)
+          wezterm.log_info("opening: " .. url)
+          wezterm.open_with(url)
+       end)
+     }}
+    },
   },
 
   
   font = wezterm.font 'Fira Code',
-  color_scheme = 'Snazzy' ,
-  font_size = 12,
+  color_scheme = 'Catppuccin Mocha' ,
+  font_size = 13,
   enable_kitty_keyboard = true,
   hide_tab_bar_if_only_one_tab = true,
   window_close_confirmation = 'NeverPrompt',

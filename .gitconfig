@@ -36,7 +36,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = emacsclient -c -a \"\"
+        editor = emacsclient -t -a \"\"
 	# editor = nvim
 [pager]
     diff = delta
@@ -84,3 +84,7 @@
 	autoupdate = true
 [init]
 	defaultBranch = main
+[gpg]
+        format = ssh
+[commit]
+        gpgsign = true

@@ -51,20 +51,25 @@ $env_var\
 $crystal\
 $custom\
 $cmd_duration\
-$time\
 $line_break\
 $lua\
 $jobs\
 $battery\
-$status\
 $shell\
 $character"""
 
+right_format="""
+$status\
+$time
+"""
+
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
+success_symbol = '[❯](bold fg:160)[❯](bold fg:166)[❯](bold fg:214)'
+error_symbol = '[❯❯❯](bold fg:160)'
 
-#[status]
-#disabled = false
+[status]
+disabled = false
 
 # Disable the package module, hiding it from the prompt completely
 [package]
@@ -82,13 +87,14 @@ disabled = true
 format = "[$duration](bold yellow)"
 
 [directory]
-style = "cyan"
+style = "fg:214"
 truncation_length = 8
 truncate_to_repo = true
 truncation_symbol = "./"
 
 [time]
-disabled = true
+disabled = false
+style="fg:220"
 format = '[\[$time\]]($style)'
 time_format = "%T"
 
@@ -98,6 +104,7 @@ symbol = ""
 #symbol = "👾 "
 
 [git_branch]
+style = "fg:220"
 format = "[$symbol$branch]($style) "
 
 [git_status]
