@@ -6,7 +6,7 @@ if not functions -q fisher
     fish -c fisher
 end
 
-set to_be_added /opt/homebrew/bin
+set to_be_added /opt/homebrew/bin $HOME/google-cloud-sdk-/bin
 for custom_path in $to_be_added
     if not contains $custom_path $fish_user_paths
         set -U fish_user_paths $custom_path $fish_user_paths
@@ -23,3 +23,5 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 bass source $HOME/.cargo/env
 set -U FZF_COMPLETE 0
+
+set -gx GITHUB_USER_NAME DragosDumitrache

@@ -1,3 +1,3 @@
-abbr -a -U -- ec 'emacsclient -nc -a ""'
-abbr -a -U -- ee 'emacsclient -e "(kill-emacs)"'
-abbr -a -U -- gdl 'gradle'
+abbr -a -- ec 'emacsclient -nc -a ""'
+abbr -a -- ee 'emacsclient -e "(kill-emacs)"'
+abbr -a -- gdl 'gradle'
