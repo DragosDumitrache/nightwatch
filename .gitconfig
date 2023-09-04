@@ -51,7 +51,7 @@
     features = interactive zebra-light
     side-by-side = true
     line-numbers = true
-    syntax-theme = GitHub
+    syntax-theme = OneHalfDark
     navigate = true
 
 [delta "interactive"]
